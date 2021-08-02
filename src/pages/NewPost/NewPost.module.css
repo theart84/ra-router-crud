@@ -1,0 +1,11 @@
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('/src/assets/x.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
