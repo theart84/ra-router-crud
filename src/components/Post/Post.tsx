@@ -11,9 +11,12 @@ const Post: React.FC<TPost & TPostFunctions> = ({id, content, onDeletePost, onEd
   const history = useHistory<History>();
   const params = useParams<ParamTypes>();
   const onViewPost = () => {
+    if (params.id) {
+      return;
+    }
     history.push(`/posts/${id}`);
   }
-
+  console.log('render')
   const onEditHandler = () => setIsEdit(prevState => !prevState);
 
   const onSubmitHandler = (event: React.KeyboardEvent): void => {
@@ -24,7 +27,6 @@ const Post: React.FC<TPost & TPostFunctions> = ({id, content, onDeletePost, onEd
       setIsEdit(false)
     }
   }
-
   return (
     <div
       className="card w-50 ml-auto mr-auto"
