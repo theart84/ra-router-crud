@@ -9,7 +9,20 @@ const app = new Koa();
 app.use(cors());
 app.use(koaBody({ json: true }));
 
-let posts = [];
+let posts = [
+  {
+    id: 'aoWV0FjOJ23',
+    content: 'Новый пост о React'    
+  },
+  {
+    id: 'aoWV0FjOJ23',
+    content: 'Новый пост о React Redux'    
+  },
+  {
+    id: 'aoWV0FjOJ23',
+    content: 'Новый пост о React Router'    
+  }
+];
 
 const router = new Router();
 

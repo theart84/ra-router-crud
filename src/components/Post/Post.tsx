@@ -16,7 +16,7 @@ const Post: React.FC<TPost & TPostFunctions> = ({id, content, onDeletePost, onEd
     }
     history.push(`/posts/${id}`);
   }
-  console.log('render')
+
   const onEditHandler = () => setIsEdit(prevState => !prevState);
 
   const onSubmitHandler = (event: React.KeyboardEvent): void => {
@@ -24,7 +24,7 @@ const Post: React.FC<TPost & TPostFunctions> = ({id, content, onDeletePost, onEd
       if (onEditPost && ref.current?.textContent) {
        onEditPost(ref.current?.textContent);
       }
-      setIsEdit(false)
+      setIsEdit(false);
     }
   }
   return (

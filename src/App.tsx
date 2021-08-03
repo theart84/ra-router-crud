@@ -7,7 +7,7 @@ import Layout from "./components/Layout/Layout";
 import NewPost from "./pages/NewPost/NewPost";
 import Posts from "./pages/Posts/Posts";
 import Post from "./components/Post/Post";
-import withPost from "./pages/withPost/withPost";
+import withPost from "./components/withPost/withPost";
 
 // HOC
 const PostHOC = withPost(Post);
